@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes</title>
+</head>
+<body>
+    <h1>Meu site principal</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic at, quia alias recusandae error voluptatum quisquam, fugit aut minus voluptates atque. Nemo adipisci a, ex nulla expedita sunt at ab! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse maxime quasi repellendus sapiente dolorum, in aliquid ab minima facere facilis maiores minus quis numquam autem alias accusantium hic suscipit vero.</p>
+
+    <iframe src="pag-extra/pag004.html" sandbox="sandbox"  referrerpolicy="no-referrer">  <!--sandbox bloqueia qq ação no iframe seria uma proteção mas tem um jeito de deixar funcionar se for uma pagina ok ou seja da mesma origem troca o sanbox do entre aspas para allow-same-origin
+        e isso aqui proibe coleta de infos dentro do iframe: referrerpolicy="no-referrer -->
+        <p>Seu navegador não é compatível!</p>
+    </iframe>
+
+    <iframe src="pag-extra/pag004.html" sandbox="allow-same-origin allow-forms allow-scripts"  referrerpolicy="no-referrer">  <!--nesse caso sandbox permite paginas da mesma origem formulário e scripts 
+        e isso aqui proibe coleta de infos dentro do iframe: referrerpolicy="no-referrer -->
+        <p>Seu navegador não é compatível!</p> 
+    </iframe>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic at, quia alias recusandae error voluptatum quisquam, fugit aut minus voluptates atque. Nemo adipisci a, ex nulla expedita sunt at ab! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse maxime quasi repellendus sapiente dolorum, in aliquid ab minima facere facilis maiores minus quis numquam autem alias accusantium hic suscipit vero.</p>
+
+</body>
+</html>
