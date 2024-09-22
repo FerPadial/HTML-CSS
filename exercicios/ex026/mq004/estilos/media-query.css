@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+/*Versão para conceito mobile first*/
+/*TODAS AS DEMAIS MEDIAS*/
+
+/* Typical Device Breakpoints - medidas de tela obtidas do W3C
+==============================================================
+Telas pequenas: até 600px
+Celular: 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Telas Grandes (TV): acima de 1200px
+*/
+
+/* Como o conceito e mobile first as configurações para dispositivos moveis ja foi feita no CSS principal style.css então não é preciso fazer aqui
+
+@media  and (max-width:600px) {
+    
+}
+
+@media  and (min-width:600px) and (max-width:768px) {
+    
+}*/
+
+@media print {
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    body{
+        background-image: url('../imagens/back-print.jpg');  /*Desnecessário pq 
+        não imprime*/
+        text-shadow: none;
+        color: black;
+    }
+
+    main{
+        border: 2px solid black;
+        width: 90vw;
+    }
+    
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
+
+    main::after {
+        content: 'Essa impressão foi gerada no CursoemVideo no treinamento de HTML-CSS com Media Queries';
+        text-decoration: overline;
+    }
+
+    img#phone { display: none;}
+    img#tablet { display: none;}
+    img#print { display: block;}
+    img#pc { display: none;}
+    img#tv { display: none;}
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {  /*TABLET*/
+    body{
+        background: url('../imagens/back-tablet.jpg');
+    }
+
+    main{
+        width: 300px;
+    }
+
+    img#phone { display: none;}
+    img#tablet { display: block;}
+    img#print { display: none;}
+    img#pc { display: none;}
+    img#tv { display: none;}
+}
+
+@media screen and (min-width:992px) and (max-width:1200px) {  /*PC*/
+    body{
+        background: url('../imagens/back-pc.jpg');
+    }    
+    main{
+        width: 500px;
+    }
+    img#phone { display: none;}
+    img#tablet { display: none;}
+    img#print { display: none;}
+    img#pc { display: block;}
+    img#tv { display: none;}
+}
+
+@media screen and (min-width:1200px) {  /*TV*/
+    body{
+        background: url('../imagens/back-tv.jpg');
+    }  
+    
+    main{
+        width: 700px;
+    }
+
+    img#phone { display: none;}
+    img#tablet { display: none;}
+    img#print { display: none;}
+    img#pc { display: none;}
+    img#tv { display: block;}
+}
+
