@@ -50,7 +50,7 @@ menu > ul > li > a {
     text-decoration: none;
     background-color: rgb(88, 88, 88);
     text-align: center;
-    color: white;
+    color: rgb(216, 207, 207);
     border-top: 2px solid gray;
 }
 
